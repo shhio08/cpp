@@ -6,7 +6,7 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 14:39:52 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/10 17:53:23 by stakimot         ###   ########.fr       */
+/*   Updated: 2023/06/10 20:52:31 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,12 @@ public:
 	void set_last_name();
 	void set_nickname();
 	void set_phone_number();
+	void set_darkest_secret();
 	std::string	get_first_name();
+	std::string	get_last_name();
+	std::string	get_nickname();
+	std::string	get_phone_number();
+	std::string	get_darkest_secret();
 };
 
 #endif

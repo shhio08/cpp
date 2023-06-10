@@ -6,7 +6,7 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 10:36:17 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/10 17:51:29 by stakimot         ###   ########.fr       */
+/*   Updated: 2023/06/10 21:02:52 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ public:
 	void	add_contact();
 	void	search_contact();
 	void	put_all_contact();
-	void	put_name(int idx);
+	void	put_name(std::string str);
+	void	put_select_idx_contact(int select_idx);
 };
 
 #endif

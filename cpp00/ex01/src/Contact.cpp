@@ -6,11 +6,11 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 14:31:30 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/10 17:53:41 by stakimot         ###   ########.fr       */
+/*   Updated: 2023/06/10 20:52:08 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "../inc/Contact.hpp"
 
 void	Contact::set_first_name(void)
 {
@@ -44,7 +44,33 @@ void	Contact::set_phone_number(void)
 	_phone_number = input_str;
 }
 
+void	Contact::set_darkest_secret(void)
+{
+	std::cout << "darkest_secret >> ";
+	std::cin >> _darkest_secret;
+}
+
 std::string	Contact::get_first_name(void)
 {
 	return (_first_name);
+}
+
+std::string	Contact::get_last_name(void)
+{
+	return (_last_name);
+}
+
+std::string	Contact::get_nickname(void)
+{
+	return (_nickname);
+}
+
+std::string	Contact::get_phone_number(void)
+{
+	return (_phone_number);
+}
+
+std::string	Contact::get_darkest_secret(void)
+{
+	return (_darkest_secret);
 }
