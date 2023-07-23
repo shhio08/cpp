@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/20 17:22:27 by stakimot          #+#    #+#             */
-/*   Updated: 2023/07/16 18:26:08 by stakimot         ###   ########.fr       */
+/*   Created: 2023/07/16 18:03:19 by stakimot          #+#    #+#             */
+/*   Updated: 2023/07/16 19:03:18 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,10 @@ private:
 
 public:
 	Zombie();
-	Zombie(std::string name);
+	Zombie(std::string);
 	~Zombie();
 	void announce();
-	void set_name(std::string name);
+	void set_name(std::string);
 };
-
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
 
 #endif
