@@ -6,7 +6,7 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 14:39:52 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/10 20:52:31 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/01/28 18:50:18 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ private:
 	std::string _darkest_secret;
 
 public:
+	std::string test;
 	void set_first_name();
 	void set_last_name();
 	void set_nickname();

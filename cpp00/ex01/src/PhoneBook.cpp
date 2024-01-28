@@ -6,11 +6,16 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 15:23:37 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/10 21:07:12 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/01/28 19:41:34 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/PhoneBook.hpp"
+
+PhoneBook::PhoneBook()
+{
+	contact_index = 0;
+}
 
 void	PhoneBook::add_contact(void)
 {
@@ -64,8 +69,14 @@ void	PhoneBook::search_contact(void)
 	std::string	select_idx;
 	put_all_contact();
 	std::cout << "search index >> ";
-	std::cin >> select_idx;
+	std::getline(std::cin, select_idx);
 	std::cout << std::endl;
+	if (std::cin.eof())
+	{
+		// ctrl + D
+		std::cin.clear();
+		exit(1) ;
+	}
 	if (select_idx == "0")
 		put_select_idx_contact(0);
 	else if (select_idx == "1")
