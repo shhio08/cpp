@@ -6,24 +6,18 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 18:54:55 by stakimot          #+#    #+#             */
-/*   Updated: 2023/07/16 19:05:11 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/03/05 23:04:57 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include "Zombie.hpp"
 
-Zombie*	zombieHorde(int N, std::string name)
+Zombie *zombieHorde(int N, std::string name)
 {
-	Zombie	*zombie;
+	Zombie *zombies;
 
-	try
-	{
-		zombie = new Zombie();
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	zombie->set_name(name);
-	return (zombie);
+	zombies = new Zombie[N];
+	for (int i = 0; i < N; i++)
+		zombies[i].set_name(name);
+	return (zombies);
 }

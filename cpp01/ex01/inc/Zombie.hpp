@@ -6,7 +6,7 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/16 18:03:19 by stakimot          #+#    #+#             */
-/*   Updated: 2023/07/16 19:03:18 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/03/05 23:09:24 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ public:
 	void announce();
 	void set_name(std::string);
 };
+
+Zombie *zombieHorde(int N, std::string name);
 
 #endif

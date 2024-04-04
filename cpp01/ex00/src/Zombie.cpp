@@ -6,11 +6,11 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 17:25:53 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/20 20:09:58 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:55:08 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include "Zombie.hpp"
 
 Zombie::Zombie() : _name("default"){}
 

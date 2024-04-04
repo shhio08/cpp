@@ -10,7 +10,10 @@ HumanB::~HumanB(){}
 
 void HumanB::attack()
 {
-	std::cout << this->_name << " attacks with their " << this->weapon->getType() << std::endl;
+	if (this->weapon == NULL)
+		std::cout << "attacks with their hand" << std::endl;
+	else
+		std::cout << this->_name << " attacks with their " << this->weapon->getType() << std::endl;
 }
 
 void HumanB::setWeapon(Weapon &weapon)

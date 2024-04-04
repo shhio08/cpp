@@ -6,12 +6,11 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 14:39:52 by stakimot          #+#    #+#             */
-/*   Updated: 2024/01/28 18:50:18 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/01/28 21:07:30 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+#pragma once
 
 #include <iostream>
 
@@ -37,5 +36,3 @@ public:
 	std::string	get_phone_number();
 	std::string	get_darkest_secret();
 };
-
-#endif

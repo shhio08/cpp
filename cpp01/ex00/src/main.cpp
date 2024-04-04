@@ -6,11 +6,11 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 19:23:32 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/20 20:09:35 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:54:59 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include "Zombie.hpp"
 
 int	main(void)
 {
@@ -24,3 +24,8 @@ int	main(void)
 	randomChump("bbb");
 	return (0);
 }
+
+// #include <stdlib.h>
+// attribute((destructor)) static void destructor(void) {
+//     system("leaks -q zombie");
+// }

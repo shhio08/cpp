@@ -6,11 +6,11 @@
 /*   By: stakimot <stakimot@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 19:04:59 by stakimot          #+#    #+#             */
-/*   Updated: 2023/06/20 20:09:49 by stakimot         ###   ########.fr       */
+/*   Updated: 2024/03/09 18:55:03 by stakimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Zombie.hpp"
+#include "Zombie.hpp"
 
 Zombie*	newZombie(std::string name)
 {
