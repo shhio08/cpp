@@ -7,7 +7,7 @@ SRCS = Fixed.cpp main.cpp
 OBJS_NAME = $(SRCS:.cpp=.o)
 OBJS = $(addprefix $(OBJDIR), $(OBJS_NAME))
 
-NAME = Fexed
+NAME = Fixed
 
 all : $(NAME)
 
