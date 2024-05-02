@@ -11,7 +11,7 @@ HumanB::~HumanB(){}
 void HumanB::attack()
 {
 	if (this->weapon == NULL)
-		std::cout << "attacks with their hand" << std::endl;
+		std::cout << this->_name << " attacks with their hand" << std::endl;
 	else
 		std::cout << this->_name << " attacks with their " << this->weapon->getType() << std::endl;
 }
