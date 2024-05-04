@@ -47,12 +47,6 @@ int Fixed::toInt() const
 	return (int)value / (1 << fractional_bits);
 }
 
-std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
-{
-    out << fixed.toFloat();
-    return out;
-}
-
 int Fixed::getRawBits() const
 {
 	std::cout << "getRawBits member function called" << std::endl;

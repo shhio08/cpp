@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include<math.h>
 
 class Fixed
 {
@@ -22,5 +23,11 @@ public:
 	int getRawBits() const;
 	void setRawBits(int const raw);
 
-	friend std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
+	// friend std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 };
+
+inline std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
+{
+    out << fixed.toInt();
+    return out;
+}
