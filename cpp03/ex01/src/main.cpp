@@ -4,6 +4,7 @@ int	main()
 {
 	ScavTrap aa;
 	std::cout << aa.getName() << std::endl;
+
 	ScavTrap RED("RED");
 	ScavTrap BLUE("BLUE");
 	ScavTrap GREEN("GREEN");

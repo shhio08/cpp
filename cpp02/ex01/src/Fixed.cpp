@@ -1,4 +1,4 @@
-#include "Fixed.hpp"
+#include "../inc/Fixed.hpp"
 
 Fixed::Fixed()
 {
@@ -9,14 +9,14 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &other)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	*this = other;
+	this->value = other.getRawBits();
 }
 
 Fixed &Fixed::operator=(const Fixed &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &other)
-		this->value = other.value;
+		this->value = other.getRawBits();
 	return (*this);
 }
 
@@ -34,17 +34,17 @@ Fixed::Fixed(const int int_val)
 Fixed::Fixed(const float float_val)
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->value = roundf(float_val * (1 << fractional_bits));
+	this->value = static_cast<int>(roundf(float_val * (1 << fractional_bits)));
 }
 
 float Fixed::toFloat() const
 {
-	return (float)value / (1 << fractional_bits);
+	return static_cast<float>(this->value) / (1 << this->fractional_bits);
 }
 
 int Fixed::toInt() const
 {
-	return (int)value / (1 << fractional_bits);
+	return this->value >> this->fractional_bits;
 }
 
 int Fixed::getRawBits() const

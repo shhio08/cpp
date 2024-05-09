@@ -22,12 +22,10 @@ public:
 	int toInt() const;
 	int getRawBits() const;
 	void setRawBits(int const raw);
-
-	// friend std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 };
 
 inline std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
 {
-    out << fixed.toInt();
+    out << fixed.toFloat();
     return out;
 }

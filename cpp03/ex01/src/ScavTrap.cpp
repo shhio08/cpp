@@ -8,7 +8,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 	this->_attack_damage = 20;
 }
 
-ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
+ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap : name constructor called" << std::endl;
 	this->_hit_points = 100;
@@ -19,10 +19,7 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other)
 {
 	std::cout << "ScavTrap : copy constructor called" << std::endl;
-	this->_name = other.getName();
-	this->_hit_points = other.getHitpoints();
-	this->_energy_points = other.getEnergyPoints();
-	this->_attack_damage = other.getAttackDamage();
+	*this = other;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& other)
@@ -40,6 +37,12 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap : destructor called" << std::endl;
+}
+
+void ScavTrap::attack(const std::string& target)
+{
+	std::cout << "ScavTrap : " << this->_name << " attack " << target << ", causing " << this->_attack_damage << " points of damage!" << std::endl;
+	this->_energy_points -= 1;
 }
 
 void ScavTrap::guardGate()
